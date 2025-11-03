@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ballistic Drone Services</title>
+  <meta name="description" content="Ballistic Drone Services — Investment-grade aerial photo, video, and inspections across Vancouver Island and BC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN: no build step required -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: { orange: '#f97316' } } }, fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }</script>
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70 border-b border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo.jpg" alt="Ballistic Drone Services logo" class="h-10 w-10 rounded-xl object-cover ring-1 ring-neutral-800">
+        <div class="leading-tight">
+          <div class="font-extrabold tracking-tight text-lg">Ballistic Drone Services</div>
+          <div class="text-xs text-neutral-400">Aerial Photo • Video • Inspections</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#services" class="text-sm text-neutral-300 hover:text-white">Services</a>
+        <a href="#industries" class="text-sm text-neutral-300 hover:text-white">Industries</a>
+        <a href="#about" class="text-sm text-neutral-300 hover:text-white">About</a>
+        <a href="#portfolio" class="text-sm text-neutral-300 hover:text-white">Portfolio</a>
+        <a href="#contact" class="rounded-2xl bg-brand-orange px-4 py-2 text-sm font-semibold text-neutral-950 shadow">Get a Quote</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden text-neutral-300" aria-label="Menu">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-neutral-800">
+      <div class="mx-auto max-w-7xl px-4 py-3 grid gap-3">
+        <a href="#services" class="text-sm text-neutral-300">Services</a>
+        <a href="#industries" class="text-sm text-neutral-300">Industries</a>
+        <a href="#about" class="text-sm text-neutral-300">About</a>
+        <a href="#portfolio" class="text-sm text-neutral-300">Portfolio</a>
+        <a href="#contact" class="rounded-2xl bg-brand-orange px-4 py-2 text-sm font-semibold text-neutral-950 text-center">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="h-full w-full bg-[url('https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/60 via-neutral-950 to-neutral-950"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 py-24 md:py-36">
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Investment‑Grade Aerials for Builders, Realtors &amp; Industry</h1>
+      <p class="mt-4 max-w-2xl text-neutral-300">Transport Canada‑compliant operations delivering crisp photos, cinematic video, and inspection data—safely, efficiently, and on budget.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#services" class="rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold hover:bg-white/15">Explore Services</a>
+        <a href="#contact" class="rounded-2xl bg-brand-orange px-4 py-2 text-sm font-semibold text-neutral-950">Book a Flight</a>
+      </div>
+      <div class="mt-10 flex flex-wrap items-center gap-6 text-xs text-neutral-400">
+        <span class="inline-flex items-center gap-2">🛡️ Fully insured</span>
+        <span class="inline-flex items-center gap-2">📍 Ladysmith, BC • BC‑wide</span>
+        <span class="inline-flex items-center gap-2">✅ Advanced RPAS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">Services</h2>
+    <p class="mt-2 text-neutral-400">Clear packages with fast turnarounds. Perfect for one‑off shoots or recurring progress updates.</p>
+    <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Cards -->
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 hover:border-brand-orange transition">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Roof &amp; Structure Inspections</h3><span>🚁</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-400">High‑res stills, detail zooms, annotated findings.</p>
+        <ul class="mt-3 space-y-1 text-sm text-neutral-300 list-disc pl-5">
+          <li>20–60 photos</li><li>Annotated PDF report</li><li>Thermal (optional)</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 hover:border-brand-orange transition">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Construction Progress / Industrial</h3><span>🏗️</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-400">Milestone sets for owners, PMs, and stakeholders.</p>
+        <ul class="mt-3 space-y-1 text-sm text-neutral-300 list-disc pl-5">
+          <li>Monthly/weekly cadences</li><li>Same‑spot framing</li><li>Before/After fly‑throughs</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 hover:border-brand-orange transition">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Real Estate Photo &amp; Video</h3><span>🏠</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-400">MLS‑ready images plus cinematic reels.</p>
+        <ul class="mt-3 space-y-1 text-sm text-neutral-300 list-disc pl-5">
+          <li>HDR stills</li><li>Orbit &amp; pull‑away shots</li><li>48h delivery</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 hover:border-brand-orange transition">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Mapping &amp; Orthomosaics</h3><span>🗺️</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-400">Site overviews and measurements.</p>
+        <ul class="mt-3 space-y-1 text-sm text-neutral-300 list-disc pl-5">
+          <li>2–3cm GSD typical</li><li>Contours (optional)</li><li>KML/GeoTIFF exports</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 hover:border-brand-orange transition">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Public Safety / Insurance</h3><span>🚨</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-400">Rapid documentation after storms or incidents.</p>
+        <ul class="mt-3 space-y-1 text-sm text-neutral-300 list-disc pl-5">
+          <li>Time‑stamped sets</li><li>Secure sharing</li><li>Priority dispatch</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 hover:border-brand-orange transition">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">Custom Shoots</h3><span>🎯</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-400">Have a special request? Let's plan it.</p>
+        <ul class="mt-3 space-y-1 text-sm text-neutral-300 list-disc pl-5">
+          <li>Shotlists</li><li>Permits</li><li>Editing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">Industries</h2>
+    <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5"><div class="text-lg font-semibold">Architecture</div><div class="text-sm text-neutral-400 mt-1">Facade studies, context &amp; massing visuals.</div></div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5"><div class="text-lg font-semibold">Construction</div><div class="text-sm text-neutral-400 mt-1">Owner’s rep updates and progress tracking.</div></div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5"><div class="text-lg font-semibold">Civic</div><div class="text-sm text-neutral-400 mt-1">Parks, roads, utilities, and public notices.</div></div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5"><div class="text-lg font-semibold">Residential</div><div class="text-sm text-neutral-400 mt-1">Listings and feature properties.</div></div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5"><div class="text-lg font-semibold">Insurance</div><div class="text-sm text-neutral-400 mt-1">Claims documentation, pre‑/post‑event.</div></div>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5"><div class="text-lg font-semibold">Inspections</div><div class="text-sm text-neutral-400 mt-1">Roofs, exteriors, towers, and more.</div></div>
+    </div>
+  </section>
+
+  <!-- Badges -->
+  <section class="bg-neutral-900/40 border-y border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 py-10 grid gap-6 md:grid-cols-3">
+      <div class="rounded-2xl border border-neutral-800 p-5 text-center"><div class="text-brand-orange font-bold">Transport Canada</div><div class="text-sm text-neutral-300">Advanced RPAS (SFOC‑ready)</div></div>
+      <div class="rounded-2xl border border-neutral-800 p-5 text-center"><div class="text-brand-orange font-bold">Insurance</div><div class="text-sm text-neutral-300">$2M liability (adjustable)</div></div>
+      <div class="rounded-2xl border border-neutral-800 p-5 text-center"><div class="text-brand-orange font-bold">Safety</div><div class="text-sm text-neutral-300">Site‑ready: PPE, orientations, JHAs</div></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="grid gap-10 md:grid-cols-2 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold">About BDS</h2>
+        <p class="mt-4 text-neutral-300">Ballistic Drone Services (BDS) is a Ladysmith‑based aerial team serving Vancouver Island and BC. We combine construction and safety expertise with cinematic flying to deliver dependable visuals and inspection data. We’re comfortable on industrial sites and with homeowner listings alike.</p>
+        <ul class="mt-4 list-disc pl-6 text-neutral-300 text-sm space-y-1">
+          <li>Efficient, safe operations—including work near people and structures where permitted.</li>
+          <li>Clear deliverables: RAW/JPEG, 4K video, orthos, and annotated PDFs.</li>
+          <li>Friendly, reliable communication from brief to delivery.</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-neutral-800 overflow-hidden">
+        <img alt="BDS drone over Vancouver Island coast" class="w-full h-72 object-cover" src="https://images.unsplash.com/photo-1518306727298-4c17e1bf6948?q=80&w=1600&auto=format&fit=crop" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">Recent Work</h2>
+    <p class="mt-2 text-neutral-400">Hook up your Pixieset/Pic‑Time, Frame.io, YouTube, or Google Drive albums here.</p>
+    <div class="mt-6 grid gap-4 md:grid-cols-3">
+      <div class="aspect-video rounded-2xl border border-neutral-800 bg-neutral-900/40 grid place-items-center text-neutral-500">Portfolio Item 1</div>
+      <div class="aspect-video rounded-2xl border border-neutral-800 bg-neutral-900/40 grid place-items-center text-neutral-500">Portfolio Item 2</div>
+      <div class="aspect-video rounded-2xl border border-neutral-800 bg-neutral-900/40 grid place-items-center text-neutral-500">Portfolio Item 3</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-7xl px-4 pb-20">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+        <p class="mt-2 text-neutral-300">Tell us about your project and we’ll get back to you quickly.</p>
+        <div class="mt-4 grid gap-2 text-sm">
+          <div>📞 <a href="tel:+12504363082" class="hover:underline">(250) 436‑3082</a></div>
+          <div>✉️ <a href="mailto:jason@ballisticdrone.ca" class="hover:underline">jason@ballisticdrone.ca</a></div>
+          <div>📍 Ladysmith, BC • Travel BC‑wide</div>
+        </div>
+      </div>
+      <form onsubmit="event.preventDefault();" class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 grid gap-4">
+        <div class="grid gap-2">
+          <label class="text-sm">Name</label>
+          <input class="rounded-xl bg-neutral-800/60 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-orange" placeholder="Your name" />
+        </div>
+        <div class="grid gap-2">
+          <label class="text-sm">Email</label>
+          <input type="email" class="rounded-xl bg-neutral-800/60 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-orange" placeholder="you@example.com" />
+        </div>
+        <div class="grid gap-2">
+          <label class="text-sm">Project details</label>
+          <textarea rows="4" class="rounded-xl bg-neutral-800/60 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-orange" placeholder="Location, timing, deliverables"></textarea>
+        </div>
+        <button class="rounded-2xl bg-brand-orange px-4 py-2 text-sm font-semibold text-neutral-950">Send</button>
+        <p class="text-xs text-neutral-500">This demo form doesn't send messages. Hook it to Formspree or a Netlify Function.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-neutral-400 flex flex-wrap items-center justify-between gap-4">
+      <div>© <span id="year"></span> Ballistic Drone Services. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:text-white">Privacy</a>
+        <a href="#" class="hover:text-white">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', ()=> menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
