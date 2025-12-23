@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <!-- Subtle topo line style -->
+    <style>
+      .c {
+        fill: none;
+        stroke: rgba(255,255,255,0.08);
+        stroke-width: 1.25;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .c2 {
+        fill: none;
+        stroke: rgba(255,255,255,0.05);
+        stroke-width: 1.0;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+
+    <!-- Soft noise-ish variation via slight blur -->
+    <filter id="soften" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background is transparent so your body color shows through -->
+  <g filter="url(#soften)">
+    <!-- Layer 1: broader contours -->
+    <path class="c" d="M-50,120 C140,40 300,60 460,140 C640,230 760,210 920,140 C1100,60 1220,70 1500,170"/>
+    <path class="c" d="M-60,220 C120,160 280,170 420,230 C610,310 780,300 930,230 C1120,150 1240,140 1500,230"/>
+    <path class="c" d="M-80,330 C90,260 260,260 420,340 C590,430 800,430 980,340 C1160,260 1290,250 1500,340"/>
+    <path class="c" d="M-80,450 C80,380 260,390 440,470 C630,560 820,560 1010,470 C1190,390 1310,380 1500,470"/>
+    <path class="c" d="M-80,590 C60,520 250,520 450,610 C660,710 860,720 1060,620 C1250,520 1360,520 1500,600"/>
+    <path class="c" d="M-60,740 C120,660 290,670 470,750 C650,830 870,840 1070,760 C1270,670 1370,670 1500,730"/>
+
+    <!-- Layer 2: tighter “nested” loops (topo pockets) -->
+    <path class="c2" d="M210,200 C160,160 170,120 235,110 C310,100 350,140 330,190 C310,240 250,250 210,200 Z"/>
+    <path class="c2" d="M250,195 C220,170 225,145 260,140 C300,135 320,160 310,190 C300,220 270,220 250,195 Z"/>
+    <path class="c2" d="M285,190 C270,178 272,165 288,163 C306,161 312,172 308,186 C304,200 295,201 285,190 Z"/>
+
+    <path class="c2" d="M980,300 C900,260 905,200 990,190 C1085,180 1140,240 1120,300 C1095,370 1030,360 980,300 Z"/>
+    <path class="c2" d="M1015,295 C955,270 960,230 1020,225 C1090,220 1120,255 1105,295 C1088,340 1045,330 1015,295 Z"/>
+
+    <path class="c2" d="M720,640 C650,590 660,530 740,520 C830,510 880,560 865,630 C850,705 780,700 720,640 Z"/>
+    <path class="c2" d="M755,635 C705,600 710,560 765,555 C825,550 855,585 845,630 C835,675 790,670 755,635 Z"/>
+
+    <!-- Layer 3: diagonal “flow” lines to reduce repeating feel -->
+    <path class="c2" d="M-100,820 C200,720 420,730 620,820 C820,910 1030,910 1500,780"/>
+    <path class="c2" d="M-120,60 C120,10 310,10 520,80 C740,150 1000,170 1500,40"/>
+  </g>
+</svg>
