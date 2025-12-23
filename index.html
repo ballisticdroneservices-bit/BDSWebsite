@@ -217,35 +217,108 @@ BDS delivers crisp aerial photography, cinematic video, and dependable inspectio
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="mx-auto max-w-7xl px-4 pb-20">
-    <div class="grid gap-8 md:grid-cols-2">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
-        <p class="mt-2 text-neutral-300">Tell us about your project and we’ll get back to you quickly.</p>
-        <div class="mt-4 grid gap-2 text-sm">
-          <div>📞 <a href="tel:+12504363082" class="hover:underline">(250) 436‑3082</a></div>
-          <div>✉️ <a href="mailto:jason@ballisticdrone.ca" class="hover:underline">jason@ballisticdrone.ca</a></div>
-          <div>📍 Ladysmith, BC • Travel BC‑wide</div>
+  <section id="contact" class="mx-auto max-w-7xl px-4 py-16">
+  <div class="grid gap-8 lg:grid-cols-2">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">Service Request</h2>
+      <p class="mt-2 text-neutral-400">
+        Tell me what you need and where. I’ll confirm scope, timing, and a quote.
+      </p>
+
+      <div class="mt-6 space-y-2 text-sm text-neutral-300">
+        <div>📧 <a class="text-brand-orange underline" href="mailto:jason@ballisticdrone.ca">jason@ballisticdrone.ca</a></div>
+        <div>📱 <a class="text-brand-orange underline" href="tel:12504363082">250-436-3082</a></div>
+        <div>📍 Ladysmith, BC • Vancouver Island + BC-wide</div>
+      </div>
+    </div>
+
+    <form name="service-request"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="#thanks"
+          class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 space-y-4">
+
+      <!-- Required for Netlify -->
+      <input type="hidden" name="form-name" value="service-request" />
+      <p class="hidden">
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label class="text-sm text-neutral-300">Name</label>
+          <input name="name" required
+                 class="mt-1 w-full rounded-xl bg-neutral-950/60 border border-neutral-800 px-3 py-2 text-neutral-100"
+                 placeholder="Your name" />
+        </div>
+        <div>
+          <label class="text-sm text-neutral-300">Phone</label>
+          <input name="phone"
+                 class="mt-1 w-full rounded-xl bg-neutral-950/60 border border-neutral-800 px-3 py-2 text-neutral-100"
+                 placeholder="250-555-1234" />
         </div>
       </div>
-      <form onsubmit="event.preventDefault();" class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 grid gap-4">
-        <div class="grid gap-2">
-          <label class="text-sm">Name</label>
-          <input class="rounded-xl bg-neutral-800/60 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-orange" placeholder="Your name" />
+
+      <div>
+        <label class="text-sm text-neutral-300">Email</label>
+        <input type="email" name="email" required
+               class="mt-1 w-full rounded-xl bg-neutral-950/60 border border-neutral-800 px-3 py-2 text-neutral-100"
+               placeholder="you@example.com" />
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label class="text-sm text-neutral-300">Service</label>
+          <select name="service" required
+                  class="mt-1 w-full rounded-xl bg-neutral-950/60 border border-neutral-800 px-3 py-2 text-neutral-100">
+            <option value="">Select…</option>
+            <option>Roof & Structure Inspection</option>
+            <option>Construction Progress / Industrial</option>
+            <option>Real Estate Photo & Video</option>
+            <option>Mapping & Orthomosaics</option>
+            <option>Public Safety / Insurance</option>
+            <option>Custom Shoot</option>
+          </select>
         </div>
-        <div class="grid gap-2">
-          <label class="text-sm">Email</label>
-          <input type="email" class="rounded-xl bg-neutral-800/60 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-orange" placeholder="you@example.com" />
+        <div>
+          <label class="text-sm text-neutral-300">When do you need it?</label>
+          <select name="timing"
+                  class="mt-1 w-full rounded-xl bg-neutral-950/60 border border-neutral-800 px-3 py-2 text-neutral-100">
+            <option>Flexible</option>
+            <option>This week</option>
+            <option>Next 1–2 weeks</option>
+            <option>This month</option>
+            <option>Rush (24–48 hrs)</option>
+          </select>
         </div>
-        <div class="grid gap-2">
-          <label class="text-sm">Project details</label>
-          <textarea rows="4" class="rounded-xl bg-neutral-800/60 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-orange" placeholder="Location, timing, deliverables"></textarea>
-        </div>
-        <button class="rounded-2xl bg-brand-orange px-4 py-2 text-sm font-semibold text-neutral-950">Send</button>
-        <p class="text-xs text-neutral-500">This demo form doesn't send messages. Hook it to Formspree or a Netlify Function.</p>
-      </form>
-    </div>
-  </section>
+      </div>
+
+      <div>
+        <label class="text-sm text-neutral-300">Location / Address</label>
+        <input name="location"
+               class="mt-1 w-full rounded-xl bg-neutral-950/60 border border-neutral-800 px-3 py-2 text-neutral-100"
+               placeholder="City or address (optional)" />
+      </div>
+
+      <div>
+        <label class="text-sm text-neutral-300">Details</label>
+        <textarea name="details" rows="5" required
+                  class="mt-1 w-full rounded-xl bg-neutral-950/60 border border-neutral-800 px-3 py-2 text-neutral-100"
+                  placeholder="Tell me what you want captured, any constraints, deliverables, etc."></textarea>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button type="submit"
+                class="rounded-2xl bg-brand-orange px-5 py-2 text-sm font-semibold text-neutral-950">
+          Submit Request
+        </button>
+        <span class="text-xs text-neutral-400">I’ll reply within 1 business day.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="border-t border-neutral-800">
@@ -264,5 +337,18 @@ BDS delivers crisp aerial photography, cinematic video, and dependable inspectio
     const menu = document.getElementById('mobileMenu');
     btn?.addEventListener('click', ()=> menu.classList.toggle('hidden'));
   </script>
+  <section id="thanks" class="mx-auto max-w-3xl px-4 py-16">
+  <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6">
+    <h2 class="text-2xl font-bold">Thanks — request received.</h2>
+    <p class="mt-2 text-neutral-300">
+      I’ll reply within 1 business day. If it’s urgent, call or text Jason at
+      <a class="text-brand-orange underline" href="tel:12504363082">250-436-3082</a>.
+    </p>
+    <a class="mt-6 inline-block rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold hover:bg-white/15" href="#services">
+      Back to Services
+    </a>
+  </div>
+</section>
+
 </body>
 </html>
